@@ -11,13 +11,7 @@ namespace Animals_SET.Controllers
     {
         public ActionResult Index()
         {
-            var listOfAnimals = new List<Animal>()
-            {
-                new Dog { Name = "Flufly", Age = 3, Gender = 'M' },
-                new Cat { Name = "Cattie", Age = 4, Gender = 'F'},
-                new Bird { Name = "Tweety", Age = 1, Gender = 'M' }
-            };
-
+            var listOfAnimals = GroupOfAnimals.Members();
             ViewBag.ListOfAnimals = listOfAnimals;
 
             return View();

@@ -7,12 +7,12 @@ namespace Animals_SET.Animals.Domain
 {
     public class Dog : Animal, IMammal
     {
-        private int nbOfBreasts;
+        private int _nbOfBreasts;
 
         public int NbOfBreasts
         {
-            get { return nbOfBreasts; }
-            set { nbOfBreasts = 10; }
+            get { return _nbOfBreasts; }
+            set { _nbOfBreasts = 10; }
         }
 
         private string vertebrate;
