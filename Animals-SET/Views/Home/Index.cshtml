@@ -28,6 +28,7 @@
         </div>
     </div>*@
 <div>
+    <h1> List of Animals </h1>
     <ul>
         @{
             foreach(var animal in ViewBag.ListOfAnimals )
@@ -38,4 +39,35 @@
             }
         }
     </ul>
+</div>
+<div>
+    <h1>Queries</h1>
+    <h2>Get animals by name</h2>
+    The list of animals whose name is Fluffy is:
+    @{
+        foreach (var animal in ViewBag.QuerybyName)
+        {
+            <li>
+                My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
+            </li>
+        }
+    }
+    <h2>Animals older than 2 years</h2>
+    @{
+        foreach (var animal in ViewBag.QuerybyAge)
+        {
+            <li>
+                My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
+            </li>
+        }
+    }
+    @*<h2>Sorted list of animals by Name (secondary by Age)</h2>
+    @{
+        foreach (var animal in ViewBag.SortAnimalsByName)
+        {
+            <li>
+                My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
+            </li>
+        }
+    }*@
 </div>

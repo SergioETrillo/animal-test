@@ -13,6 +13,9 @@ namespace Animals_SET.Controllers
         {
             var listOfAnimals = GroupOfAnimals.Members();
             ViewBag.ListOfAnimals = listOfAnimals;
+            ViewBag.QuerybyName = QueryAnimals.GetAnimalsByName("Fluffy");
+            ViewBag.QuerybyAge = QueryAnimals.GetAnimalsOlderThan(2);
+            //ViewBag.SortbyName = QueryAnimals.SortAnimalsByName();
 
             return View();
         }
