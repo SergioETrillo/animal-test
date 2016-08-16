@@ -12,5 +12,10 @@ namespace Animals_SET.Animals.Domain
         public char Gender { get; set; }
 
         public abstract string makeSound();
+
+        public string GetAnimalType()
+        {
+            return this.GetType().Name;
+        }
     }
 }
