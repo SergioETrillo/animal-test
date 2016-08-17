@@ -55,6 +55,7 @@
     <Compile Include="Animals.Domain\BirdTests.cs" />
     <Compile Include="Animals.Domain\CatTests.cs" />
     <Compile Include="Animals.Domain\DogTests.cs" />
+    <Compile Include="Animals.Domain\GroupOfAnimalsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

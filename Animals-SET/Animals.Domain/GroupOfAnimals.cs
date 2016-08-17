@@ -13,15 +13,26 @@ namespace Animals_SET.Animals.Domain
         {
             var listOfAnimals = new List<Animal>()
             {
-                new Dog { Name = "Fluffy", Age = 3, Gender = 'M' },
-                new Cat { Name = "Cattie", Age = 4, Gender = 'F'},
-                new Bird { Name = "Tweety", Age = 1, Gender = 'M' }
+                new Dog { Id = 1, Name = "Fluffy", Age = 3, Gender = 'M' },
+                new Cat { Id = 2, Name = "Cattie", Age = 4, Gender = 'F'},
+                new Bird {Id = 3, Name = "Tweety", Age = 1, Gender = 'M' }
             };
 
             return listOfAnimals;
         }
 
-        public static string serializeList()
+        // for test purposes
+        public static List<Animal> OneAnimal()
+        {
+            var onlyAnimal = new List<Animal>()
+            {
+                new Dog { Id = 1, Name = "Fluffy", Age = 3, Gender = 'M' }
+            };
+
+            return onlyAnimal;
+        }
+
+        public static string SerializeList()
         {
             return JsonConvert.SerializeObject(Members());
         }
