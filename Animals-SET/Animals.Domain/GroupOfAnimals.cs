@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,11 @@ namespace Animals_SET.Animals.Domain
             };
 
             return listOfAnimals;
+        }
+
+        public static string serializeList()
+        {
+            return JsonConvert.SerializeObject(Members());
         }
     }
 }
