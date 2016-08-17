@@ -61,17 +61,39 @@
             </li>
         }
     }
-    @*<h2>Sorted list of animals by Name (secondary by Age)</h2>
+    <h2>Sorted list of animals by Name (secondary by Age)</h2>
     @{
-        foreach (var animal in ViewBag.SortAnimalsByName)
+        foreach (var animal in ViewBag.SortbyName)
         {
             <li>
                 My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
             </li>
         }
-    }*@
+    }
 </div>
 <div>
     <h2>Serialized List</h2>
     @ViewBag.SerializedList
 </div>
+
+<form>
+    <div>
+        ID: <br /> <input name="Id" /><br />
+        Animal Type: <select name="Type"></>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Bird">Bird</option>
+        </select> 
+        <br />
+        Name: <br /> <input name="Name" />
+        <br />
+        Age: <br /><input name="Age" />
+        <br />
+        Gender: <select name="Gender">
+            <option typeof="M">Male </option>
+            <option typeof="F">Female </option>
+        </select>
+        <label id="hola"></label>
+
+    </div>
+</form>

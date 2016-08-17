@@ -15,7 +15,7 @@ namespace Animals_SET.Controllers
             ViewBag.ListOfAnimals = listOfAnimals;
             ViewBag.QuerybyName = QueryAnimals.GetAnimalsByName("Fluffy");
             ViewBag.QuerybyAge = QueryAnimals.GetAnimalsOlderThan(2);
-            //ViewBag.SortbyName = QueryAnimals.SortAnimalsByName();
+            ViewBag.SortbyName = QueryAnimals.SortAnimalsByNameAge();
             ViewBag.SerializedList = GroupOfAnimals.SerializeList();
 
             return View();
@@ -34,5 +34,6 @@ namespace Animals_SET.Controllers
 
             return View();
         }
+
     }
 }

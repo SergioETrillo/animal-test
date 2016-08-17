@@ -21,17 +21,6 @@ namespace Animals_SET.Animals.Domain
             return listOfAnimals;
         }
 
-        // for test purposes
-        public static List<Animal> OneAnimal()
-        {
-            var onlyAnimal = new List<Animal>()
-            {
-                new Dog { Id = 1, Name = "Fluffy", Age = 3, Gender = 'M' }
-            };
-
-            return onlyAnimal;
-        }
-
         public static string SerializeList()
         {
             return JsonConvert.SerializeObject(Members());

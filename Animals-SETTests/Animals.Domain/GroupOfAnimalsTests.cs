@@ -26,9 +26,8 @@ namespace Animals_SET.Animals.Domain.Tests
         public void serializeListTest()
         {
             //Arrange
-            var list = GroupOfAnimals.OneAnimal();
+            var expected = @"[{""NbOfBreasts"":0,""VertebrateType"":""bones"",""Id"":1,""Name"":""Fluffy"",""Age"":3,""Gender"":""M""},{""NbOfBreasts"":8,""VertebrateType"":""bones"",""Id"":2,""Name"":""Cattie"",""Age"":4,""Gender"":""F""},{""Id"":3,""Name"":""Tweety"",""Age"":1,""Gender"":""M""}]";
             //Act
-            var expected = @"[{""NbOfBreasts"":0,""VertebrateType"":""bones"",""Id"":1,""Name"":""Fluffy"",""Age"":3,""Gender"":""M""},{""NbOfBreasts"":8,""VertebrateType"":""bones"",""Id"":2,""Name"":""Cattie"",""Age"":4,""Gender"":""F""},{""Id"":3,""Name"":""Tweety"",""Age"":1,""Gender"":""M""}]";            
             var actual = GroupOfAnimals.SerializeList();
             //Assert
             Assert.AreEqual(expected, actual);

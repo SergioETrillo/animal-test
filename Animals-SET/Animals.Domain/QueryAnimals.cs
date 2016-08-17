@@ -25,11 +25,18 @@ namespace Animals_SET.Animals.Domain
         }
 
         // this one does not work, and I don't understand why... list is always null
-        //public static List<Animal> SortAnimalsByName()
-        //{
-        //    var sortedAnimals = GroupOfAnimals.Members().OrderBy(x => x.Name).ToList();
-
-        //    return sortedAnimals;
-        //}
+        public static List<Animal> SortAnimalsByNameAge()
+        {
+            var sortedAnimals = GroupOfAnimals.Members()
+                                              .OrderBy(a => a.Name)
+                                              .ThenBy(a => a.Age)
+                                              .ToList();
+            var count = sortedAnimals.Count;
+            foreach (Animal a in sortedAnimals)
+            {
+                Console.WriteLine(a.Name);
+            }
+            return sortedAnimals;
+        }
     }
 }
