@@ -12,10 +12,11 @@ namespace Animals_SET.Animals.Domain
     {
         public Bird()
         {
+            Type = GetAnimalType();
             // to allow create list using default instantiation of class Bird
         }
 
-        public Bird(string name, int age, char gender)
+        public Bird(string name, int age, char gender) : this()
         {
             this.Name = name;
             this.Age = age;

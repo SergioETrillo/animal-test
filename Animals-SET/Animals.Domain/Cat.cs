@@ -18,6 +18,7 @@ namespace Animals_SET.Animals.Domain
 
         public Cat()
         {
+            Type = GetAnimalType();
             _vertebrateType = "bones";
         }
 
