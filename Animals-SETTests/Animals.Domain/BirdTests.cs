@@ -15,7 +15,7 @@ namespace Animals_SET.Animals.Domain.Tests
         public void BirdTest()
         {
             //Arrange
-            var oneBird = new Bird("Piolin", 2, 'M');
+            var oneBird = new Bird(4, "Piolin", 2, 'M');
             var expectedName = "Piolin";
             var expectedAge = 2;
             var expectedGender = 'M';
@@ -36,7 +36,7 @@ namespace Animals_SET.Animals.Domain.Tests
         {
             //Arrange
             var expected = '\0';   // default value of char
-            var oneBird = new Bird("Piolin", 2, 'X');
+            var oneBird = new Bird(5, "Piolin", 2, 'X');
             //Act 
             var actual = oneBird.Gender;
             //Assert

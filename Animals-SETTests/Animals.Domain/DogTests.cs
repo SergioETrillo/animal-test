@@ -30,7 +30,7 @@ namespace Animals_SET.Animals.Domain.Tests
         public void DogTestParametrizedConstructor()
         {
             //Arrange
-            var oneDog = new Dog("Rachel", 12, 'F');
+            var oneDog = new Dog(199, "Rachel", 12, 'F');
             var expectedNbBreasts = Dog.DOGBREASTS;
             var expectedVertebrate = "bones";
             //Act
@@ -45,8 +45,8 @@ namespace Animals_SET.Animals.Domain.Tests
         public void FeedOffSpringTest()
         {
             //Arrange
-            var oneFemaleDog = new Dog("Rachel", 12, 'F');
-            var oneMaleDog = new Dog("Pepe", 3, 'M');
+            var oneFemaleDog = new Dog(111, "Rachel", 12, 'F');
+            var oneMaleDog = new Dog(123, "Pepe", 3, 'M');
             var expectedFemaleResult = "Breastfeeding...";
             var expectedMaleResult = "Sorry no food";
             //Act

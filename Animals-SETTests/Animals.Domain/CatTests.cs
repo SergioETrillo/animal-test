@@ -30,7 +30,7 @@ namespace Animals_SET.Animals.Domain.Tests
         public void CatTestParametrizedConstructor()
         {
             //Arrange
-            var oneCat = new Cat("Rachel", 12, 'F');
+            var oneCat = new Cat(1,"Rachel", 12, 'F');
             var expectedNbBreasts = Cat.CATBREASTS;
             var expectedVertebrate = "bones";
             //Act
@@ -45,8 +45,8 @@ namespace Animals_SET.Animals.Domain.Tests
         public void FeedOffSpringTest()
         {
             //Arrange
-            var oneFemaleCat = new Cat("Rachel", 12, 'F');
-            var oneMaleCat = new Cat("Pepe", 3, 'M');
+            var oneFemaleCat = new Cat(2, "Rachel", 12, 'F');
+            var oneMaleCat = new Cat(3, "Pepe", 3, 'M');
             var expectedFemaleResult = "Breastfeeding...";
             var expectedMaleResult = "Sorry no food";
             //Act
