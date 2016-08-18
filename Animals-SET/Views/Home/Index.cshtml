@@ -76,7 +76,7 @@
     @ViewBag.SerializedList
 </div>
 
-<form>
+<form asp-action="Create" asp-controller="Home">
     <div>
         ID: <br /> <input name="Id" /><br />
         Animal Type: <select name="Type"></>
@@ -93,7 +93,8 @@
             <option typeof="M">Male </option>
             <option typeof="F">Female </option>
         </select>
-        <label id="hola"></label>
+        <br />
+        <input type="submit" value="Create animal" />
 
     </div>
 </form>

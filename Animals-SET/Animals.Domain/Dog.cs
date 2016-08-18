@@ -10,9 +10,11 @@ namespace Animals_SET.Animals.Domain
     /// </summary>
     public class Dog : Animal, IMammal
     {
+        public const int DOGBREASTS = 10;
+
         private int _nbOfBreasts;
         private string _vertebrateType;
-        public const int DOGBREASTS = 10;
+        
 
         public Dog()
         {
