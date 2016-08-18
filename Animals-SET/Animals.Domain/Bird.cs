@@ -16,8 +16,9 @@ namespace Animals_SET.Animals.Domain
             // to allow create list using default instantiation of class Bird
         }
 
-        public Bird(string name, int age, char gender) : this()
+        public Bird(int id, string name, int age, char gender) : this()
         {
+            this.Id = id;
             this.Name = name;
             this.Age = age;
             if (gender.Equals('M') || gender.Equals('F'))

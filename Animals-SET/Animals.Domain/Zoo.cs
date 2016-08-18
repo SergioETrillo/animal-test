@@ -21,6 +21,15 @@ namespace Animals_SET.Animals.Domain
             set { _members = value; }
         }
 
+        private static int _waterMarkCount = Zoo.Members.Count;
+
+        public static int WaterMarkCount
+        {
+            get { return _waterMarkCount; }
+            set { _waterMarkCount = Math.Max(value, _waterMarkCount); }
+        }
+
+
         public static string SerializeList()
         {
             return JsonConvert.SerializeObject(Members);

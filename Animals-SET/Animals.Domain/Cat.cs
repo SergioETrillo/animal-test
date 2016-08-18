@@ -22,8 +22,9 @@ namespace Animals_SET.Animals.Domain
             _vertebrateType = "bones";
         }
 
-        public Cat(string name, int age, char gender) : this()
+        public Cat(int id, string name, int age, char gender) : this()
         {
+            this.Id = id;
             this.Name = name;
             this.Age = age;
             if (gender.Equals('M') || gender.Equals('F'))
