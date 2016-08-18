@@ -11,12 +11,13 @@ namespace Animals_SET.Controllers
     {
         public ActionResult Index()
         {
-            var listOfAnimals = GroupOfAnimals.Members();
+            var listOfAnimals = Zoo.Members;
             ViewBag.ListOfAnimals = listOfAnimals;
             ViewBag.QuerybyName = QueryAnimals.GetAnimalsByName("Fluffy");
             ViewBag.QuerybyAge = QueryAnimals.GetAnimalsOlderThan(2);
             ViewBag.SortbyName = QueryAnimals.SortAnimalsByNameAge();
-            ViewBag.SerializedList = GroupOfAnimals.SerializeList();
+            ViewBag.OneAnimal = QueryAnimals.GetAnimalById(1);
+            ViewBag.SerializedList = Zoo.SerializeList();
 
             return View();
         }

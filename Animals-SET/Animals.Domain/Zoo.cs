@@ -6,24 +6,24 @@ using System.Web;
 
 namespace Animals_SET.Animals.Domain
 {
-    public static class GroupOfAnimals
+    public static class Zoo
     {
-
-        public static List<Animal> Members()
-        {
-            var listOfAnimals = new List<Animal>()
+        private static List<Animal> _members = new List<Animal>()
             {
                 new Dog { Id = 1, Name = "Fluffy", Age = 3, Gender = 'M' },
                 new Cat { Id = 2, Name = "Cattie", Age = 4, Gender = 'F'},
                 new Bird {Id = 3, Name = "Tweety", Age = 1, Gender = 'M' }
             };
 
-            return listOfAnimals;
+        public static List<Animal> Members
+        {
+            get { return _members; }
+            set { _members = value; }
         }
 
         public static string SerializeList()
         {
-            return JsonConvert.SerializeObject(Members());
+            return JsonConvert.SerializeObject(Members);
         }
     }
 }

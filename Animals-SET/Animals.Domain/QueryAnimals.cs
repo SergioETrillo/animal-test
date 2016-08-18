@@ -9,7 +9,7 @@ namespace Animals_SET.Animals.Domain
     {
         public static List<Animal> GetAnimalsByName(string name)
         {
-            var animalsByName = GroupOfAnimals.Members()
+            var animalsByName = Zoo.Members
                 .Where(p => p.Name == name)
                 .ToList();
 
@@ -18,16 +18,15 @@ namespace Animals_SET.Animals.Domain
 
         public static List<Animal> GetAnimalsOlderThan(int age)
         {
-            var animalsByName = GroupOfAnimals.Members()
+            var animalsByName = Zoo.Members
                 .Where(p => p.Age > age).ToList();
 
             return animalsByName;
         }
 
-        // this one does not work, and I don't understand why... list is always null
         public static List<Animal> SortAnimalsByNameAge()
         {
-            var sortedAnimals = GroupOfAnimals.Members()
+            var sortedAnimals = Zoo.Members
                                               .OrderBy(a => a.Name)
                                               .ThenBy(a => a.Age)
                                               .ToList();
@@ -37,6 +36,13 @@ namespace Animals_SET.Animals.Domain
                 Console.WriteLine(a.Name);
             }
             return sortedAnimals;
+        }
+
+        public static Animal GetAnimalById(int id)
+        {
+            var animal = Zoo.Members.Single(a => a.Id == id);
+
+            return animal;
         }
     }
 }

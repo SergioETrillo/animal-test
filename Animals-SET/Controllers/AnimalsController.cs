@@ -12,11 +12,10 @@ namespace Animals_SET.Controllers
         // GET: Animals
         public ActionResult Index()
         {
-            //var Animals = GroupOfAnimals.Members();
             var model =
-                from r in GroupOfAnimals.Members()
-                orderby r.Name
-                select r;
+                from a in Zoo.Members          
+                orderby a.Name
+                select a;
                         
                 return View(model);
         }
@@ -52,23 +51,23 @@ namespace Animals_SET.Controllers
         // GET: Animals/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            //var animal = _zoo.Single(a => a.Id == id);
+            var animal = Zoo.Members.Single(a => a.Id == id);
+            return View(animal);
         }
 
         // POST: Animals/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
-            try
-            {
-                // TODO: Add update logic here
-
+            //var animal = _zoo.Single(a => a.Id == id);
+            var animal = Zoo.Members.Single(a => a.Id == id);
+            if (TryUpdateModel(animal))
+            {                
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(animal);
         }
 
         // GET: Animals/Delete/5
@@ -92,5 +91,12 @@ namespace Animals_SET.Controllers
                 return View();
             }
         }
+
+        static List<Animal> _zoo = new List<Animal>()
+            {
+                new Dog { Id = 1, Name = "Fluffy-group", Age = 33, Gender = 'M' },
+                new Cat { Id = 2, Name = "Cattie-group", Age = 44, Gender = 'F'},
+                new Bird {Id = 3, Name = "Tweety-group", Age = 11, Gender = 'M' }
+            };
     }
 }
