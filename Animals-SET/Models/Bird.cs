@@ -13,7 +13,6 @@ namespace Animals_SET.Animals.Domain
         public Bird()
         {
             Type = GetAnimalType();
-            // to allow create list using default instantiation of class Bird
         }
 
         public Bird(int id, string name, int age, char gender) : this()
@@ -25,9 +24,8 @@ namespace Animals_SET.Animals.Domain
                 this.Gender = gender;
         }
 
-        public override string makeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("tweet tweet!");
             return "tweet";
         }
     }

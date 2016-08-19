@@ -41,7 +41,6 @@ namespace Animals_SET.Animals.Domain
             get { return _vertebrateType; }
         }
 
-
         public string FeedOffSpring()
         {
             string result = "";
@@ -50,9 +49,8 @@ namespace Animals_SET.Animals.Domain
             return result;
         }
 
-        public override string makeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("woof woof!");
             return "woof";
         }
     }

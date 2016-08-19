@@ -16,8 +16,10 @@ namespace Animals_SET.Animals.Domain.Tests
         {
             //Arrange
             var list = Zoo.Members;
+
             //Act
             int expectedLength = 3;
+
             //Assert
             Assert.AreEqual(list.Count, expectedLength);
         }
@@ -27,8 +29,10 @@ namespace Animals_SET.Animals.Domain.Tests
         {
             //Arrange
             var expected = @"[{""NbOfBreasts"":0,""VertebrateType"":""bones"",""Id"":1,""Name"":""Fluffy"",""Type"":""Dog"",""Age"":3,""Gender"":""M""},{""NbOfBreasts"":8,""VertebrateType"":""bones"",""Id"":2,""Name"":""Cattie"",""Type"":""Cat"",""Age"":4,""Gender"":""F""},{""Id"":3,""Name"":""Tweety"",""Type"":""Bird"",""Age"":1,""Gender"":""M""}]";
+            
             //Act
             var actual = Zoo.SerializeList();
+            
             //Assert
             Assert.AreEqual(expected, actual);
         }

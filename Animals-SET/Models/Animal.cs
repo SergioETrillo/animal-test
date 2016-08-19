@@ -16,7 +16,7 @@ namespace Animals_SET.Animals.Domain
         public int Age { get; set; }
         public char Gender { get; set; }
 
-        public abstract string makeSound();
+        public abstract string MakeSound();
 
         public string GetAnimalType()
         {

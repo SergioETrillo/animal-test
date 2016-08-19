@@ -16,15 +16,14 @@ namespace Animals_SET.Animals.Domain.Tests
         {
             //Arrange
             var filtered = QueryAnimals.GetAnimalsByName("Tweety");
-            //Act
             var expectedCount = 1;
             var expectedId = 3;
 
-
-            //Assert
+            //Act
             var actualCount = filtered.Count;
             var actualId = filtered[0].Id;
 
+            //Assert
             Assert.AreEqual(expectedCount, actualCount);
             Assert.AreEqual(expectedId, actualId);
         }
@@ -34,17 +33,16 @@ namespace Animals_SET.Animals.Domain.Tests
         {
             //Arrange
             var filtered = QueryAnimals.GetAnimalsOlderThan(2);
+
             //Act
             var expectedCount = 2;
             var expectedFirstId = 1;
             var expectedLastId = 2;
-
-
-            //Assert
             var actualCount = filtered.Count;
             var actualFirstId = filtered[0].Id;
             var actualLastId = filtered[1].Id;
 
+            //Assert
             Assert.AreEqual(expectedCount, actualCount);
             Assert.AreEqual(expectedFirstId, actualFirstId);
             Assert.AreEqual(expectedLastId, actualLastId);

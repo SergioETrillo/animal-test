@@ -58,13 +58,15 @@ namespace Animals_SET.Animals.Domain.Tests
         }
 
         [TestMethod()]
-        public void CatmakeSoundTest()
+        public void CatMakeSoundTest()
         {
             //Arrange
             var oneCat = new Cat();
             var expected = "meaw";
+
             //Act
-            var actual = oneCat.makeSound();
+            var actual = oneCat.MakeSound();
+
             //Assert
             Assert.AreEqual(expected, actual);
         }

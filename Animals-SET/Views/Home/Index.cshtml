@@ -3,111 +3,14 @@
 }
 
 <div class="jumbotron">
-    <h1>Animals App</h1>
-</div>
-@*
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </div>
-    </div>*@
-<div>
-    <h1> List of Animals </h1>
-    <ul>
-        @{
-            foreach(var animal in ViewBag.ListOfAnimals )
-            {
-                <li>
-                    My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
-                </li>
-            }
-        }
-    </ul>
-</div>
-<div>
-    <h1>Queries</h1>
-    <h2>Get animals by name</h2>
-    The list of animals whose name is Fluffy is:
-    @{
-        foreach (var animal in ViewBag.QuerybyName)
-        {
-            <li>
-                My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
-            </li>
-        }
-    }
-    <h2>Animals older than 2 years</h2>
-    @{
-        foreach (var animal in ViewBag.QuerybyAge)
-        {
-            <li>
-                My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
-            </li>
-        }
-    }
-    <h2>Sorted list of animals by Name (secondary by Age)</h2>
-    @{
-        foreach (var animal in ViewBag.SortbyName)
-        {
-            <li>
-                My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
-            </li>
-        }
-    }
-</div>
-<div>
-    <h2>Serialized List</h2>
-    @ViewBag.SerializedList
-</div>
-
-@*<form asp-action="Create" asp-controller="Home">
-    <div>
-        ID: <br /> <input name="Id" /><br />
-        Animal Type: <select name="Type"></>
-            <option value="Dog">Dog</option>
-            <option value="Cat">Cat</option>
-            <option value="Bird">Bird</option>
-        </select> 
-        <br />
-        Name: <br /> <input name="Name" />
-        <br />
-        Age: <br /><input name="Age" />
-        <br />
-        Gender: <select name="Gender">
-            <option typeof="M">Male </option>
-            <option typeof="F">Female </option>
-        </select>
-        <br />
-        <input type="submit" value="Create animal" />
-
+    <div class="row text-center">
+        <h1>Welcome To the Website! Grrrr!</h1>
     </div>
-</form>*@
-<div>
-    test for update animal
-    Updated age?: @ViewBag.OneAnimal.Age
-    and list of animals:
-    @{
-        foreach (var animal in ViewBag.ListOfAnimals)
-        {
-            <li>
-                My name is @animal.Name, and I am a @(animal.Gender.Equals('F') ? "female" : "male") @animal.GetAnimalType() of @animal.Age years old
-            </li>
-        }
-    }
+</div>
+
+<div class="container">
+    <div class="row text-center">
+        <img src="~/Content/Images/cheetahs.jpg" />
+        <p>Have a peek around. Enjoy!</p>
+    </div>
 </div>

@@ -16,6 +16,13 @@ namespace Animals_SET.Animals.Domain
             return animalsByName;
         }
 
+        public static int CountAnimalsByName(string name)
+        {
+            int result = Zoo.Members.Count(a => a.Name == name);
+
+            return result;
+        }
+
         public static List<Animal> GetAnimalsOlderThan(int age)
         {
             var animalsByName = Zoo.Members
@@ -28,13 +35,15 @@ namespace Animals_SET.Animals.Domain
         {
             var sortedAnimals = Zoo.Members
                                               .OrderBy(a => a.Name)
-                                              .ThenBy(a => a.Age)
+                                              .ThenByDescending(a => a.Age)
                                               .ToList();
+
             var count = sortedAnimals.Count;
             foreach (Animal a in sortedAnimals)
             {
                 Console.WriteLine(a.Name);
             }
+
             return sortedAnimals;
         }
 

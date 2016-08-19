@@ -22,19 +22,26 @@ namespace Animals_SET.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult FunnyStats()
         {
-            ViewBag.Message = "Your application description page.";
+            var listOfAnimals = Zoo.Members;
+            ViewBag.ListOfAnimals = listOfAnimals;
+            ViewBag.QuerybyName = QueryAnimals.GetAnimalsByName("Fluffy");
+            ViewBag.CountbyName = QueryAnimals.CountAnimalsByName("Fluffy");
+            ViewBag.QuerybyAge = QueryAnimals.GetAnimalsOlderThan(2);
+            ViewBag.SortbyNameAgeDesc = QueryAnimals.SortAnimalsByNameAge();
+            ViewBag.OneAnimal = QueryAnimals.GetAnimalById(1);
+            ViewBag.SerializedList = Zoo.SerializeList();
 
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
     }
 }

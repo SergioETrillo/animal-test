@@ -44,13 +44,15 @@ namespace Animals_SET.Animals.Domain.Tests
         }
 
         [TestMethod()]
-        public void BirdmakeSoundTest()
+        public void BirdMakeSoundTest()
         {
             //Arrange
             var oneBird = new Bird();
             var expected = "tweet";
+
             //Act
-            var actual = oneBird.makeSound();
+            var actual = oneBird.MakeSound();
+
             //Assert
             Assert.AreEqual(expected, actual);
         }

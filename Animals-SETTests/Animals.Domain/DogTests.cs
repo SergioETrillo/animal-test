@@ -58,13 +58,15 @@ namespace Animals_SET.Animals.Domain.Tests
         }
 
         [TestMethod()]
-        public void DogmakeSoundTest()
+        public void DogMakeSoundTest()
         {
             //Arrange
             var oneDog = new Dog();
             var expected = "woof";
+
             //Act
-            var actual = oneDog.makeSound();
+            var actual = oneDog.MakeSound();
+
             //Assert
             Assert.AreEqual(expected, actual);
         }

@@ -15,7 +15,6 @@ namespace Animals_SET.Animals.Domain
         private int _nbOfBreasts;
         private string _vertebrateType;
         
-
         public Cat()
         {
             Type = GetAnimalType();
@@ -42,8 +41,6 @@ namespace Animals_SET.Animals.Domain
             get { return _vertebrateType; }
         }
             
-
-
         public string FeedOffSpring()
         {
             string result = "";
@@ -52,9 +49,8 @@ namespace Animals_SET.Animals.Domain
             return result;
         }
 
-        public override string makeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("meaw meaw!");
             return "meaw";
         }
     }
